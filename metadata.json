@@ -1,0 +1,6 @@
+{
+  "name": "Prosper Roofing",
+  "description": "Professional roof repair services for homeowners across Central Texas. Fast, reliable, and done right.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
