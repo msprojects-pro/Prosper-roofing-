@@ -1,4 +1,21 @@
 import { ServiceItem, GalleryItem } from '../types';
+import heroImg from '../assets/images/hero-roof-repair.jpg';
+import aboutImg from '../assets/images/about-inspection.jpg';
+import shingleRepairImg from '../assets/images/gallery-shingle-repair.jpg';
+import stormDamageImg from '../assets/images/gallery-storm-damage.jpg';
+import roofMaintenanceImg from '../assets/images/gallery-roof-maintenance.jpg';
+import chimneyFlashingImg from '../assets/images/gallery-chimney-flashing.jpg';
+import residentialHomeImg from '../assets/images/gallery-residential-home.jpg';
+
+export const ROOFING_IMAGES = {
+  hero: heroImg,
+  about: aboutImg,
+  shingleRepair: shingleRepairImg,
+  stormDamage: stormDamageImg,
+  roofMaintenance: roofMaintenanceImg,
+  chimneyFlashing: chimneyFlashingImg,
+  residentialHome: residentialHomeImg,
+};
 
 export const BUSINESS_INFO = {
   name: 'Prosper Roofing',
@@ -103,7 +120,7 @@ export const PROJECT_GALLERY: GalleryItem[] = [
     id: 'work-1',
     title: 'Roof Repair',
     category: 'Shingle Restoration',
-    imageUrl: 'https://images.unsplash.com/photo-1632759145351-1d592919f522?auto=format&fit=crop&w=1400&q=80',
+    imageUrl: ROOFING_IMAGES.hero,
     aspectClass: 'md:col-span-8 md:row-span-2 h-[340px] md:h-[480px]',
     alt: 'Professional roofer repairing shingles on residential roof',
   },
@@ -111,7 +128,7 @@ export const PROJECT_GALLERY: GalleryItem[] = [
     id: 'work-2',
     title: 'Shingle Repair',
     category: 'Architectural Shingle Fix',
-    imageUrl: 'https://images.unsplash.com/photo-1628744876497-eb30460be9f6?auto=format&fit=crop&w=800&q=80',
+    imageUrl: ROOFING_IMAGES.shingleRepair,
     aspectClass: 'md:col-span-4 h-[230px]',
     alt: 'Close-up detail of repaired shingles on residential property',
   },
@@ -119,7 +136,7 @@ export const PROJECT_GALLERY: GalleryItem[] = [
     id: 'work-3',
     title: 'Storm Damage',
     category: 'Hail & Wind Repair',
-    imageUrl: 'https://images.unsplash.com/photo-1541888946425-d0fbb186156a?auto=format&fit=crop&w=800&q=80',
+    imageUrl: ROOFING_IMAGES.stormDamage,
     aspectClass: 'md:col-span-4 h-[230px]',
     alt: 'Roof inspection and storm repair work on roof ridge',
   },
@@ -127,7 +144,7 @@ export const PROJECT_GALLERY: GalleryItem[] = [
     id: 'work-4',
     title: 'Roof Maintenance',
     category: 'Penetration & Pipe Boot Sealing',
-    imageUrl: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=800&q=80',
+    imageUrl: ROOFING_IMAGES.roofMaintenance,
     aspectClass: 'md:col-span-4 h-[260px]',
     alt: 'Roof technician working on residential roof system',
   },
@@ -135,7 +152,7 @@ export const PROJECT_GALLERY: GalleryItem[] = [
     id: 'work-5',
     title: 'Chimney Flashing',
     category: 'Flashing & Valley Sealing',
-    imageUrl: 'https://images.unsplash.com/photo-1590381105924-c72589b9ef3f?auto=format&fit=crop&w=800&q=80',
+    imageUrl: ROOFING_IMAGES.chimneyFlashing,
     aspectClass: 'md:col-span-4 h-[260px]',
     alt: 'Residential roofline with clean flashing and ventilation',
   },
@@ -143,7 +160,7 @@ export const PROJECT_GALLERY: GalleryItem[] = [
     id: 'work-6',
     title: 'Roof Inspection',
     category: 'Texas Home Roof Assessment',
-    imageUrl: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80',
+    imageUrl: ROOFING_IMAGES.residentialHome,
     aspectClass: 'md:col-span-4 h-[260px]',
     alt: 'Texas residential home with sound roof condition',
   },

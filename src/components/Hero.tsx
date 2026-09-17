@@ -1,5 +1,5 @@
 import { Phone, ArrowRight, MapPin, CheckCircle2, ShieldAlert } from 'lucide-react';
-import { BUSINESS_INFO } from '../data/roofingData';
+import { BUSINESS_INFO, ROOFING_IMAGES } from '../data/roofingData';
 
 export default function Hero() {
   const scrollToContact = (e: React.MouseEvent) => {
@@ -102,11 +102,16 @@ export default function Hero() {
           <div className="lg:col-span-5 relative">
             <div className="relative rounded-sm overflow-hidden border border-zinc-200 shadow-sm bg-zinc-100">
               <img
-                src="https://images.unsplash.com/photo-1632759145351-1d592919f522?auto=format&fit=crop&w=1200&q=85"
+                src={ROOFING_IMAGES.hero}
                 alt="Professional roofer repairing shingles on residential roof in Central Texas"
                 className="w-full h-[400px] sm:h-[480px] lg:h-[530px] object-cover object-center"
                 loading="eager"
-                referrerPolicy="no-referrer"
+                onError={(e) => {
+                  const target = e.currentTarget;
+                  if (target.src !== window.location.origin + '/images/hero-roof-repair.jpg') {
+                    target.src = '/images/hero-roof-repair.jpg';
+                  }
+                }}
               />
 
               {/* Clean bottom information badge (no gradient overlay) */}

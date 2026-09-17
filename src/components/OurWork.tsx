@@ -43,7 +43,12 @@ export default function OurWork() {
                 alt={item.alt}
                 className="w-full h-full object-cover object-center group-hover:scale-102 transition-transform duration-300 opacity-95 group-hover:opacity-100"
                 loading="lazy"
-                referrerPolicy="no-referrer"
+                onError={(e) => {
+                  const target = e.currentTarget;
+                  if (!target.src.includes('/images/')) {
+                    target.src = '/images/hero-roof-repair.jpg';
+                  }
+                }}
               />
 
               {/* Clean label overlay at bottom */}

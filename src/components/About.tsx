@@ -1,5 +1,5 @@
 import { Phone, ArrowRight } from 'lucide-react';
-import { BUSINESS_INFO, PRINCIPLES } from '../data/roofingData';
+import { BUSINESS_INFO, PRINCIPLES, ROOFING_IMAGES } from '../data/roofingData';
 
 export default function About() {
   return (
@@ -11,11 +11,16 @@ export default function About() {
           <div className="lg:col-span-6 order-2 lg:order-1">
             <div className="relative rounded-sm overflow-hidden border border-zinc-200 shadow-sm bg-zinc-100">
               <img
-                src="https://images.unsplash.com/photo-1541888946425-d0fbb186156a?auto=format&fit=crop&w=1200&q=85"
+                src={ROOFING_IMAGES.about}
                 alt="Roofer inspecting and executing repair work on residential shingles"
                 className="w-full h-[400px] sm:h-[480px] lg:h-[540px] object-cover"
                 loading="lazy"
-                referrerPolicy="no-referrer"
+                onError={(e) => {
+                  const target = e.currentTarget;
+                  if (target.src !== window.location.origin + '/images/about-inspection.jpg') {
+                    target.src = '/images/about-inspection.jpg';
+                  }
+                }}
               />
 
               <div className="p-5 bg-zinc-50 border-t border-zinc-200">
